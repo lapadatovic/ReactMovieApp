@@ -21,15 +21,18 @@ header {
     padding: 20px 0;
 }
 
-.logo{
+.link-logo {
     font-size: 1.4rem;
-    color:var(--text-color) ;
     font-weight: 600;
     text-transform: uppercase;
     margin: 0 auto 0 0;
 }
 
-.logo span {
+.logo {
+    color:var(--text-color) ;
+}
+
+.link-logo .logo span {
     color: var(--main-color);
 }
 .search-box {
@@ -69,31 +72,4 @@ header {
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-}
-.navbar {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 18px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2.1rem;
-}
-.nav-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #b7b7b7;
-}
-.nav-link:hover,
-.nav-active {
-    color: var(--text-color);
-    transition: 0.3s all linear;
-    transform: scale(1.1);
-}
-.nav-link .fa {
-    font-size: 1.6rem;
-}
-.nav-link-tittle {
-    font-size: 0.7rem;
 }

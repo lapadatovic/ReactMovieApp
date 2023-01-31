@@ -1,16 +1,19 @@
 import './App.css';
-import Header from './components/Header/Header';
-import {Routes, Route} from 'react-router-dom'
+import Layout from './components/Layout/Layout';
+import {Routes, Route, Outlet} from 'react-router-dom'
 import Home from './components/Home/Home'
 import MovieDetail from './components/MovieDetail/MovieDetail'
+import Trending from './components/Trending/Trending';
 function App() {
   return (
     <div className="app">
-    <Header />
+    <Layout />
     <Routes>
-      <Route to='/' element={<Home/>}/>
+      <Route index element={<Home/>}/>
+      {/* <Route to= 'trending' element={<Trending/>} /> */}
       <Route to='/movie/:movieId' element={<MovieDetail />}/>
     </Routes>
+      <Outlet></Outlet>
     </div>
   );
 }
