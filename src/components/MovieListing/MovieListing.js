@@ -1,9 +1,22 @@
 import React from 'react'
-
+import MovieCard from '../MovieCard/MovieCard'
+import './movieListing.css'
 export default function MovieListing() {
   return (
-    <div>
-        MovieListing
-    </div>
+    <section class="movies container" id="movies">
+        <div class="heading">
+            <h2 class="heading-tittle">Movies And Shows</h2>
+        </div>
+        <div class="movies-content">
+            {/*movies card*/}
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+        </div>
+    </section>
   )
 }

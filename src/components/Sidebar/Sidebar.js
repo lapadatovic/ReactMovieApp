@@ -34,7 +34,6 @@ export default function Sidebar() {
                 <span class="nav-link-title">Favourite</span>
             </a>
         </Link>
-        {/* <Outlet/> */}
     </div>
   )
 }
