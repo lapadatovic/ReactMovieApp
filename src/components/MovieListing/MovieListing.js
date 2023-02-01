@@ -1,6 +1,7 @@
 import React from 'react'
 import MovieCard from '../MovieCard/MovieCard'
 import './movieListing.css'
+
 export default function MovieListing() {
   return (
     <section class="movies container" id="movies">
@@ -8,10 +9,7 @@ export default function MovieListing() {
             <h2 class="heading-tittle">Movies And Shows</h2>
         </div>
         <div class="movies-content">
-            {/*movies card*/}
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
+            {/*movies cards*/}
             <MovieCard />
             <MovieCard />
             <MovieCard />
