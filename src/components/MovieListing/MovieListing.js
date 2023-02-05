@@ -3,6 +3,11 @@ import MovieCard from '../MovieCard/MovieCard'
 import './movieListing.css'
 import { fetchTrendingMovies,selectTrendingMovies } from '../../features/movies/movieSlice'
 import { useDispatch, useSelector} from 'react-redux'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Navigation } from "swiper";
 
 export default function MovieListing() {
 
@@ -17,15 +22,11 @@ export default function MovieListing() {
 
   useEffect(()=>{
     setTrendingMoviesList(
-      trendingMoviesList = Array.from(trendingMovies).map((movie, index)=> {
-        return(<MovieCard key={index} movie={movie}/>)
+      trendingMoviesList = Array.from(trendingMovies).filter(rate => rate.popularity > 1700.000).map((movie, index)=> {
+        return(<SwiperSlide> <MovieCard key={index} movie={movie}/> </SwiperSlide>)
       })
     )
   },[trendingMovies])
-
-  // trendingMoviesList = Array.from(trendingMovies).map((movie, index)=> {
-  //   return(<MovieCard key={index} movie={movie}/>)
-  // })
   
   return (
     <section class="movies container" id="movies">
@@ -34,7 +35,23 @@ export default function MovieListing() {
         </div>
         <div class="movies-content">
             {/*movies cards*/}
-            {trendingMoviesList}
+            
+            <div>
+              <Swiper
+                slidesPerView={3}
+                spaceBetween={30}
+                loop={true}
+                navigation={true}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+                >
+                {trendingMoviesList}
+
+              </Swiper>
+            </div>
         </div>
     </section>
   )
