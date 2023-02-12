@@ -6,7 +6,7 @@ const KEY = 'c50c5516a3be6c606811e8b1a753f3f2';
 const TRENDING_MOVIES_URL = `${BASE_URL}/trending/all/day?api_key=${KEY}`
 
 const initialState = {
-    movies:{}
+    movies: []
 }
 
   //   fetch('https://api.themoviedb.org/3/trending/all/day?api_key=c50c5516a3be6c606811e8b1a753f3f2')

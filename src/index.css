@@ -273,7 +273,7 @@ header{
   transform: scale(1.1);
   transition: 0.5s;
 }
-.next-page{
+/* .next-page{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,13 +289,13 @@ header{
 .next-btn:hover{
   background: var(--hover-color);
   transition: 0.3s all linear;
-}
+} */
 
-
+/* 
 .copyright{
   text-align: center;
   padding: 20px;
-}
+} */
 
 
 .play-container{
@@ -512,20 +512,24 @@ header{
 
 @media(max-width:1170px){
   .navbar{
-      bottom: 0;
-      left: 0;
-      right: 0;
-      top: auto;
-      transform: translate(0);
-      flex-direction: row;
-      justify-content: space-evenly;
-      row-gap: 1px;
-      padding: 10px;
-      border-top: 1px solid hsl(200 100% 99% / 5%);
-      background: linear-gradient(8deg,hsl(240 17% 14% / 100%) 5%,hsl(240 17% 14% / 90%) 100%);
-      z-index: 100;
-
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    transform: translate(0);
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 1px;
+    padding: 10px;
+    border-top: 1px solid hsl(200 100% 99% / 5%);
+    background: linear-gradient(8deg,hsl(240 17% 14% / 100%) 5%,hsl(240 17% 14% / 90%) 100%);
+    z-index: 100;
   }
+
+  /* .trending-movies {
+    margin-bottom: 200px;
+  }  */
+
   .nav-link .fa{
       font-size: 1.5rem;
   }
@@ -542,6 +546,9 @@ header{
 @media(max-width:991px){
   .movie-box{
       height: 340px;
+  }
+  .show-box{
+    height: 340px;
   }
   .movies-content{
       grid-template-columns: repeat(auto-fit,minmax(214px,1fr));

@@ -1,0 +1,18 @@
+.trending-movies {
+    height: 100%;
+    width: 100%;
+    /* background-color: brown; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-heading {
+    margin-top: 50px;
+}
+
+.heading-tittle {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}

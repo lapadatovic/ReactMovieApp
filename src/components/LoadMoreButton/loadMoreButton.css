@@ -1,0 +1,22 @@
+.load-more-button {
+    padding:10px 15px;
+    border: none;
+    color: white;
+    background-color: #2d2e37;
+    border-radius: 1px solid #1e1e2a;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.load-more-button span {
+    color: var(--main-color);
+}
+
+.load-more-button:hover span {
+    color: var(--hover-color);
+}
+
+.button-container {
+    margin-bottom: 100px;
+}
