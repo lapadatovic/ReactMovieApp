@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function MovieDetail() {
+export default function MovieDetail({props}) {
   return (
     <>
     <div class="play-container container">
       <img src="play-page/play-background.jpg" alt="" class="play-img"/>
       <div class="play-text">
-        <h2>Jumanji: Welcom To The Joungle</h2>
+        <h2>MOVIE/SHOW TITLE</h2>
         <div class="rating">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -27,7 +27,7 @@ export default function MovieDetail() {
       <i class=" play-movie fa-solid fa-play "></i>
       <div class="video-container">
         <div class="video-box">
-          <video id="myvideo" src="play-page/Jumanji.mp4" controls></video>
+          {/* <video id="myvideo" src="play-page/Jumanji.mp4" controls></video> */}
           <i class="close-video fa-solid fa-xmark"></i>
         </div>
       </div>

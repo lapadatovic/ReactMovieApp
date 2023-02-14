@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import { Link } from 'react-router-dom'
 import MovieCard from '../MovieCard/MovieCard'
 import './movieListing.css'
 import { fetchTrendingMovies,selectTrendingMovies } from '../../features/movies/movieSlice'
@@ -21,8 +22,13 @@ export default function MovieListing() {
 
   useEffect(()=>{
     setTrendingMoviesList(
-      trendingMoviesList = Array.from(trendingMovies).filter(rate => rate.popularity > 1000.000).map((movie, index)=> {
-        return(<SwiperSlide> <MovieCard key={index} movie={movie}/> </SwiperSlide>)
+      trendingMoviesList = Array.from(trendingMovies).filter(rate => rate.popularity > 1000.000).map((movie)=> {
+        return(
+        <SwiperSlide> 
+          <Link style={{textDecoration:'none', color:'white'}} to='movies/:movieId'>
+            <MovieCard key={movie.id} movie={movie}/> 
+          </Link>
+        </SwiperSlide>)
       })
     )
   },[trendingMovies])

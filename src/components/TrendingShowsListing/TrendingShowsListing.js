@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Pagination, Navigation } from 'swiper'
+import { Link } from 'react-router-dom';
 import { fetchTVShows, selectAllTVShows } from '../../features/tvShows/TVShowSlice';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import TrendingShowCard from '../TrendingShowCard/TrendingShowCard'
@@ -20,15 +21,20 @@ export default function TrendingShowsListing() {
   },[dispatch])
   
   useEffect(()=>{
-    setShows(Array.from(trendingShows).map((show,index) => {
-      return(<SwiperSlide><TrendingShowCard key={index} show={show}/></SwiperSlide>)
+    setShows(Array.from(trendingShows).map((show) => {
+      return(
+      <SwiperSlide>
+        <Link style={{textDecoration:'none', color:'white'}} to='shows/:showId'>
+          <TrendingShowCard key={show.id} show={show}/>
+        </Link>
+      </SwiperSlide>)
     }))
   },[trendingShows])
 
   return (
     <section class="shows container" id="shows">
         <div class="heading">
-            <h2 class="heading-tittle">Trending shows</h2>
+            <h2 class="heading-tittle">Trending Shows</h2>
         </div>
         <div class="shows-content">
             <Swiper

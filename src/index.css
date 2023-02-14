@@ -58,6 +58,7 @@ header{
   background-color: var(--body-color);
   z-index: 100;
 }
+
 .nav{
   display: flex;
   align-items: center;

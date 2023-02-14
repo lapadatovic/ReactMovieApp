@@ -4,6 +4,7 @@ import MovieCard from '../MovieCard/MovieCard'
 import {fetchTrendingMovies, selectTrendingMovies} from '../../features/movies/movieSlice'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import LoadMoreButton from '../LoadMoreButton/LoadMoreButton'
 
 export default function MoviesPage() {
@@ -11,7 +12,7 @@ export default function MoviesPage() {
 
   const fetchedMovies = useSelector((state) => selectTrendingMovies(state));
   const [movies, setMovies] = useState([]);
-  const [noOfDisplayedMovies, setNoOfDisplayedMovies] = useState(4)
+  const [noOfDisplayedMovies, setNoOfDisplayedMovies] = useState(8)
 
   const slice = fetchedMovies.slice(0,noOfDisplayedMovies)
 
@@ -24,16 +25,18 @@ export default function MoviesPage() {
   },[dispatch])
 
   useEffect(()=>{
-    setMovies(slice.map((movie) => <MovieCard key={movie.id} movie={movie}/>))
+    setMovies(slice.map((movie) => 
+        <Link style={{ textDecoration: 'none', color:'white' }} to='movieId'> 
+          <MovieCard key={movie.id} movie={movie}/> 
+        </Link>
+      ))
   },[fetchedMovies, noOfDisplayedMovies])
 
-  console.log(movies.length)
-  console.log(noOfDisplayedMovies)
 
   return (
     <section class="trending-movies container" id="movies">
         <div class="trending-heading">
-            <h2 class="heading-tittle">Trending Movies</h2>
+            <h2 class="heading-tittle">Movies</h2>
         </div>
         <div class="movies-content">
             {/*movies cards*/}

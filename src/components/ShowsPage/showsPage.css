@@ -1,0 +1,12 @@
+.all-shows {
+    height: 100%;
+    width: 100%;
+    /* background-color: brown; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.all-shows-heading {
+    margin-top: 50px;
+}

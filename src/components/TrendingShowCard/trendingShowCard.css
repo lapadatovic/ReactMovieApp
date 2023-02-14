@@ -35,3 +35,8 @@
     bottom: 0.8rem;
     right: 0.8rem;
   }
+
+.show-box:hover .show-box-img {
+  scale: (1);
+  transition: 0.5s;
+}

@@ -10,7 +10,7 @@ export default function TrendingShowCard({show}) {
     <img src={getShowPoster(show.poster_path)} alt="" class="show-box-img"/>
       <div class="box-text">
         <h2 class="show-tittle">{show.title ? show.title : show.name}</h2>
-        <a href="play-page.html" class="watch-btn play-btn">
+        <a href="#" class="watch-btn play-btn">
         <i class="fa fa-solid fa-play"></i>
         </a>
       </div>

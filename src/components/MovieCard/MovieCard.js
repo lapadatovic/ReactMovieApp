@@ -11,7 +11,7 @@ export default function MovieCard( {movie} ) {
     <img src={getPosterURL(movie.backdrop_path)} alt="" class="movie-box-img"/>
       <div class="box-text">
           <h2 class="movie-tittle">{movie.title ? movie.title : movie.name}</h2>
-          <a href="play-page.html" class="watch-btn play-btn">
+          <a href='#' class="watch-btn play-btn">
               <i class="fa fa-solid fa-play"></i>
           </a>
       </div>
